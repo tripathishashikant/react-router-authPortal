@@ -1,16 +1,31 @@
-# React + Vite
+# React Router Auth Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple authentication portal built with React Router v7, demonstrating protected routes and authentication flows using loaders and actions.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Authentication**: Simple username/password login simulation using `localStorage`.
+- **Protected Routes**: The Dashboard route is protected and requires authentication.
+- **Redirects**:
+  - Unauthenticated users are redirected to Login when accessing protected routes.
+  - Authenticated users are redirected to Dashboard when accessing Login.
+- **Data APIs**: Utilizes React Router's `loader` and `action` for data handling and route protection.
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
 
-## Expanding the ESLint configuration
+    ```bash
+    npm install
+    ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+## Credentials
+
+- **Username**: `admin`
+- **Password**: `123`
