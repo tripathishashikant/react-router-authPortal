@@ -3,9 +3,9 @@ import { Outlet } from 'react-router'
 function RootLayout() {
   return (
     <>
-      <header>My App Header</header>
+      <header><h1>My App Header</h1></header>
       <Outlet />
-      <footer>© copyright 2026</footer>
+      <footer><p>© copyright 2026</p></footer>
     </>
   )
 }

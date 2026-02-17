@@ -1,5 +1,5 @@
 import { redirect } from 'react-router'
-import { isAuthenticated } from './auth'
+import { isAuthenticated } from '@/utils/auth'
 
 export const rootLoader = () => redirect('/dashboard')
 

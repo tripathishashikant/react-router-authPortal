@@ -11,6 +11,7 @@ import {
   proctectedLoader,
   authPageLoader
 } from "@/utils/loader.js"
+import { loginAction } from "@/utils/actions.js"
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
         path: "/login",
         loader: authPageLoader,
         Component: Login,
+        action: loginAction,
       },
       {
         path: "*",

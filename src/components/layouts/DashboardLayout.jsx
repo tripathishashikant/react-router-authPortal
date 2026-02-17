@@ -5,7 +5,7 @@ function DashboardLayout() {
         <>
             <section id='mainContent'>
                 <aside>
-                    <h2>Navigation</h2>
+                    <h2>Side Nav</h2>
                     <ul>
                         <li>Link 1</li>
                         <li>Link 2</li>
