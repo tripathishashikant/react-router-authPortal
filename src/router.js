@@ -8,8 +8,8 @@ import NotFound from "@/components/pages/NotFound.jsx"
 
 import {
   rootLoader,
-  proctectedLoader,
-  authPageLoader
+  dashboardPageLoader,
+  loginPageLoader
 } from "@/utils/loader.js"
 import { loginAction } from "@/utils/actions.js"
 
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "dashboard",
-        loader: proctectedLoader,
+        loader: dashboardPageLoader,
         Component: DashboardLayout,
         children: [
           {
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        loader: authPageLoader,
+        loader: loginPageLoader,
         Component: Login,
         action: loginAction,
       },

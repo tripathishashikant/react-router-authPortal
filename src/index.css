@@ -39,7 +39,8 @@ body {
   padding: 2.5rem;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  width: 320px;
+  width: 100%;
+  max-width: 400px;
 }
 
 form {
@@ -103,4 +104,13 @@ button:hover {
 .main-content {
   flex-grow: 1;
   padding: 2rem;
+  background-color: #1a1a1a;
+  position: relative;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 10;
 }

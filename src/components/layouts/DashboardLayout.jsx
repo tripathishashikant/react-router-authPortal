@@ -1,6 +1,14 @@
-import { Outlet } from 'react-router'
+import { Outlet, useNavigate } from 'react-router'
+import { removeUserToken } from '@/utils/auth'
 
 function DashboardLayout() {
+    const navigate = useNavigate()
+
+    const handleLogout = () => {
+        removeUserToken()
+        navigate('/login')
+    }
+
     return (
         <>
             <section className='dashboard-layout'>
@@ -13,6 +21,7 @@ function DashboardLayout() {
                     </ul>
                 </aside>
                 <main className='main-content'>
+                    <button className='logout-btn' onClick={handleLogout}>Logout</button>
                     <Outlet />
                 </main>
             </section>

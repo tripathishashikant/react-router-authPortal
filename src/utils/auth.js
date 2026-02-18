@@ -1,3 +1,11 @@
-export const isAuthenticated = () => !!localStorage.getItem('userToken')
+import { USER_TOKEN } from "../constant"
 
-export const setUserToken = () => localStorage.setItem('userToken', 'abc-123-xyz')
+export const isAuthenticated = () => {
+    const userToken = localStorage.getItem('userToken')
+
+    return userToken && userToken === USER_TOKEN
+}
+
+export const setUserToken = () => localStorage.setItem('userToken', USER_TOKEN)
+
+export const removeUserToken = () => localStorage.removeItem('userToken')

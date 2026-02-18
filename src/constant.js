@@ -1,0 +1,1 @@
+export const USER_TOKEN = 'abc-123-xyz'
