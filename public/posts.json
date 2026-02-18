@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Understanding React Router v7",
+    "body": "React Router v7 brings a lot of improvements in data loading and routing patterns.",
+    "userId": 101
+  },
+  {
+    "id": 2,
+    "title": "Mastering CSS Grid",
+    "body": "CSS Grid is a powerful tool for creating complex layouts with ease and precision.",
+    "userId": 102
+  },
+  {
+    "id": 3,
+    "title": "The Future of Web Development",
+    "body": "Web technologies are evolving rapidly, with AI and edge computing leading the way.",
+    "userId": 103
+  },
+  {
+    "id": 4,
+    "title": "JavaScript Performance Tips",
+    "body": "Optimizing your JavaScript code can significantly improve the user experience of your web apps.",
+    "userId": 101
+  },
+  {
+    "id": 5,
+    "title": "Introduction to TypeScript",
+    "body": "TypeScript adds static typing to JavaScript, making your code more robust and maintainable.",
+    "userId": 104
+  },
+  {
+    "id": 6,
+    "title": "Building Accessible Components",
+    "body": "Accessibility is crucial for ensuring that everyone can use and enjoy your web applications.",
+    "userId": 102
+  },
+  {
+    "id": 7,
+    "title": "State Management in 2025",
+    "body": "Choosing the right state management library depends on the complexity and scale of your project.",
+    "userId": 105
+  },
+  {
+    "id": 8,
+    "title": "The Benefits of Server-Side Rendering",
+    "body": "SSR can improve SEO and initial load times for content-heavy websites.",
+    "userId": 103
+  },
+  {
+    "id": 9,
+    "title": "Effective Debugging Techniques",
+    "body": "Learning how to debug efficiently is one of the most valuable skills for any developer.",
+    "userId": 101
+  },
+  {
+    "id": 10,
+    "title": "Exploring the Web Audio API",
+    "body": "The Web Audio API allows you to create and manipulate sound directly in the browser.",
+    "userId": 106
+  }
+]
