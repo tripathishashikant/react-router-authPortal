@@ -74,6 +74,10 @@ button:hover {
   background-color: #535bf2;
 }
 
+.hide {
+  display: none;
+}
+
 .error-message {
   color: #ff6b6b;
   background: rgba(255, 107, 107, 0.1);

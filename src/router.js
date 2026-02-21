@@ -15,25 +15,30 @@ import {
 } from "@/utils/loader.js"
 import { loginAction } from "@/utils/actions.js"
 
-const router = createBrowserRouter([
+export const routes = [
   {
+    name: 'root',
     path: "/",
     Component: RootLayout,
     children: [
       {
+        name: 'dashboardRedirct',
         index: true,
         loader: rootLoader,
       },
       {
+        name: 'dashboardLayout',
         path: "dashboard",
         loader: dashboardPageLoader,
         Component: DashboardLayout,
         children: [
           {
+            name: 'dashboard',
             index: true,
             Component: Dashboard,
           },
           {
+            name: 'posts',
             path: 'posts',
             loader: postsPageLoader,
             Component: Posts
@@ -41,17 +46,21 @@ const router = createBrowserRouter([
         ],
       },
       {
+        name: 'login',
         path: "login",
         loader: loginPageLoader,
         Component: Login,
         action: loginAction,
       },
       {
+        name: 'notFound',
         path: "*",
         Component: NotFound,
       },
     ],
   },
-])
+]
+
+const router = createBrowserRouter(routes)
 
 export default router
