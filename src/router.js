@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router"
+import { createBrowserRouter } from "react-router-dom"
 
 import RootLayout from "@/components/layouts/RootLayout"
 import DashboardLayout from "@/components/layouts/DashboardLayout"
@@ -6,7 +6,6 @@ import Login from "@/components/pages/Login"
 import Dashboard from "@/components/pages/Dashboard"
 import Posts from "@/components/pages/Posts"
 import NotFound from "@/components/pages/NotFound"
-import Loader from "@/components/common/Loader.jsx"
 
 import {
   rootLoader,
@@ -20,7 +19,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: RootLayout,
-    HydrateFallback: Loader,
     children: [
       {
         index: true,
@@ -43,7 +41,7 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "/login",
+        path: "login",
         loader: loginPageLoader,
         Component: Login,
         action: loginAction,

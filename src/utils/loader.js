@@ -1,7 +1,13 @@
-import { redirect } from 'react-router'
+import { redirect } from 'react-router-dom'
 import { isAuthenticated } from '@/utils/auth'
 
-export const rootLoader = () => redirect('/dashboard')
+export const rootLoader = () => {
+    if (isAuthenticated()) {
+        return redirect('/dashboard')
+    }
+
+    return redirect('/login')
+}
 
 export const dashboardPageLoader = () => {    
     if (!isAuthenticated()) return redirect('/login')

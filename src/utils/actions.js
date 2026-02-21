@@ -1,4 +1,4 @@
-import { redirect } from 'react-router'
+import { redirect } from 'react-router-dom'
 import { setUserToken } from '@/utils/auth'
 
 export async function loginAction({ request }) {

@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from 'react-router'
+import { Outlet, useNavigate, Link } from 'react-router-dom'
 import { removeUserToken } from '@/utils/auth'
 
 function DashboardLayout() {
@@ -15,9 +15,9 @@ function DashboardLayout() {
                 <aside className='side-nav'>
                     <h2>Side Nav</h2>
                     <ul>
-                        <li>Link 1</li>
-                        <li>Link 2</li>
-                        <li>Link 3</li>
+                        <li>
+                            <Link to='posts'>Posts</Link>
+                        </li>
                     </ul>
                 </aside>
                 <main className='main-content'>
