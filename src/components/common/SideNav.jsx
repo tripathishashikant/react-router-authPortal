@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom'
 import { routes } from '@/router'
 
 function SideNav () {
-    const { children: dashboardRoutes = [] } = routes[0]?.children.find((route) => route.name === 'dashboardLayout') || {}
-    const filteredDashboardRoutes = dashboardRoutes.filter(route => route.name === 'dashboard' || route.name === 'posts')
+    const { children: dashboardRoutes = [] } = routes[0]?.children.find((route) => route.id === 'dashboardLayout') || {}
+    const filteredDashboardRoutes = dashboardRoutes.filter(route => route.id === 'dashboard' || route.id === 'posts-loader-route')
 
     return (
         <aside className='side-nav'>
@@ -12,15 +12,16 @@ function SideNav () {
             {
               filteredDashboardRoutes.map((route) => {
                 const path = route.index ? '.' : route.path
+                const text = route.id === 'posts-loader-route' ? 'Posts' : (route.id.charAt(0).toUpperCase() + route.id.slice(1))
 
                 return (
                   <NavLink
-                    key={route.name}
+                    key={route.id}
                     to={path}
                     className={({ isActive }) => isActive ? 'hide' : ''}
                     end={route.index === true}
                   >
-                    {route.name.charAt(0).toUpperCase() + route.name.slice(1)}
+                    {text}
                   </NavLink>
                 )
               })
