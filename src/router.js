@@ -5,6 +5,7 @@ import DashboardLayout from "@/components/layouts/DashboardLayout"
 import Login from "@/components/pages/Login"
 import Dashboard from "@/components/pages/Dashboard"
 import Posts from "@/components/pages/Posts"
+import Post from '@/components/pages/Post'
 import NotFound from "@/components/pages/NotFound"
 
 import {
@@ -17,43 +18,54 @@ import { loginAction } from "@/utils/actions.js"
 
 export const routes = [
   {
-    name: 'root',
+    id: 'root',
     path: "/",
     Component: RootLayout,
     children: [
       {
-        name: 'dashboardRedirct',
+        id: 'dashboardRedirct',
         index: true,
         loader: rootLoader,
       },
       {
-        name: 'dashboardLayout',
+        id: 'dashboardLayout',
         path: "dashboard",
         loader: dashboardPageLoader,
         Component: DashboardLayout,
         children: [
           {
-            name: 'dashboard',
+            id: 'dashboard',
             index: true,
             Component: Dashboard,
           },
           {
-            name: 'posts',
+            id: 'posts-loader-route',
             path: 'posts',
             loader: postsPageLoader,
-            Component: Posts
+            children: [
+              {
+                id: 'posts',
+                index: true,
+                Component: Posts
+              },
+              {
+                id: 'post',
+                path: ':id',
+                Component: Post,
+              }
+            ]
           }
         ],
       },
       {
-        name: 'login',
+        id: 'login',
         path: "login",
         loader: loginPageLoader,
         Component: Login,
         action: loginAction,
       },
       {
-        name: 'notFound',
+        id: 'notFound',
         path: "*",
         Component: NotFound,
       },

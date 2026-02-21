@@ -1,8 +1,7 @@
-import { useLoaderData } from "react-router-dom"
+import { useRouteLoaderData, Link } from "react-router-dom"
 
 function Posts() {
-    const posts = useLoaderData()
-
+    const posts = useRouteLoaderData('posts-loader-route')
     const limitPostBody = (content) => content.slice(0, 50) + '...'
 
     return (
@@ -10,10 +9,11 @@ function Posts() {
             <h2>Posts</h2>
             <div className="posts-grid">
                 {posts.map((post) => (
-                    <div key={post.id} className="post-card">
-                        <h3>{post.title}</h3>
-                        <p>{limitPostBody(post.body)}</p>
-                    </div>
+                  <div key={post.id} className="post-card">
+                    <h3>{post.title}</h3>
+                    <p>{limitPostBody(post.body)}</p>
+                    <Link to={`${post.id}`}> View Post </Link>
+                  </div>   
                 ))}
             </div>
         </section>
