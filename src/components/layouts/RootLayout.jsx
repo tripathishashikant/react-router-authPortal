@@ -7,7 +7,7 @@ function RootLayout() {
 
   return (
     <>
-      <header><h1>My App Header</h1></header>
+      <header><h1>React Router with Authentication</h1></header>
       { isNavigate ? <Loader /> : <Outlet /> }
       <footer><p>© copyright 2026</p></footer>
     </>
